@@ -7,5 +7,7 @@ public class Main {
         pavelbasket.add( "Щит", 15000, 12);
         pavelbasket.print("Щит");
         basket.print("Milk");
+        Arithmetic first  = new Arithmetic(100,20);
+        first.printIng("Посчитал:");
     }
 }
