@@ -54,7 +54,7 @@ public class Basket {
         }
 
         items = items + "\n" + name + " - " +
-            count + " шт. - " + price;
+            count + " шт. - " + price + " руб. " + " вес - " + count * weight;
         totalPrice = totalPrice + count * price;
         totalWeight = totalWeight + count * price;
     }
