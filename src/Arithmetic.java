@@ -1,24 +1,30 @@
 public class Arithmetic {
-    private int totalPrice;
-    private int price;
-    private  int sum =0;
+    private int totalPrice = 0;
+    private int price = 0;
+    private String items = "";
+    private int sum = 0;
 
-    public Arithmetic ( int totalPrice, int price) {
-
+    public Arithmetic(){
+        items = "Арифметические вычисления:";
+    }
+    public Arithmetic(int totalPrice, int price) {
+        this();
         this.totalPrice = totalPrice;
         this.price = price;
-
     }
-    public void summa (int ) {
+
+    public Arithmetic(String items) {
+        this.items = items;
+    }
+    public void summa(){
         sum = totalPrice + price;
     }
 
-    public void
-
-    public void printIng (String title){
-
-        System.out.println(totalPrice);
-        System.out.println(price);
-        System.out.println(sum);
+    public void printIng() {
+        if (items.isEmpty()) {
+            System.out.println(sum);
+        }else{
+            System.out.println(items);
+        }
     }
 }
