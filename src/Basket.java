@@ -2,7 +2,7 @@ public class Basket {
 
     private static int count = 0;
     private String items = "";
-    private int totalPrice = 0;
+    private static int totalPrice = 0;
     private  double totalWeight = 0;
     private int limit;
 
@@ -65,7 +65,7 @@ public class Basket {
         totalWeight = 0;
     }
 
-    public int getTotalPrice() {
+    public static int getTotalPrice() {
         return totalPrice;
     }
 

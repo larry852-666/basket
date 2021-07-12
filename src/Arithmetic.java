@@ -1,10 +1,11 @@
 public class Arithmetic {
-    private int totalPrice = 0;
+    private int totalPrice = Basket.getTotalPrice();
     private int price = 0;
     private String items = "";
     private int sum = 0;
 
     public Arithmetic(){
+
         items = "Арифметические вычисления:";
     }
     public Arithmetic(int totalPrice, int price) {
@@ -12,19 +13,16 @@ public class Arithmetic {
         this.totalPrice = totalPrice;
         this.price = price;
     }
-
-    public Arithmetic(String items) {
-        this.items = items;
-    }
-    public void summa(){
-        sum = totalPrice + price;
-    }
-
-    public void printIng() {
-        if (items.isEmpty()) {
-            System.out.println(sum);
-        }else{
-            System.out.println(items);
+    public Arithmetic(String items, int price1, int price2) {
+        if(price1 >= price){
+            int del = totalPrice / price1;
+            System.out.println("Деление: " + del);
+        } else {
+            sum = price1 + price2;
+            System.out.println("Общая сумма:" + sum);
         }
-    }
+        int minus = price2 - price1;
+        System.out.println("Общая сумма:" + minus);
+    };
+
 }
