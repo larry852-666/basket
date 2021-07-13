@@ -6,6 +6,9 @@ public class Basket {
     private  double totalWeight = 0;
     private int limit;
 
+    private static int allPrice;
+    private static int allBasket;
+
     public Basket() {
         increaseCount(1);
         items = "Список товаров:";
@@ -26,6 +29,25 @@ public class Basket {
     public static int getCount() {
 
         return count;
+    }
+
+    public static void allPrice (int price) {
+
+        Basket.allPrice = Basket.allPrice + price;
+    }
+    public static int getAllPrice() {
+
+        return allPrice;
+    }
+
+    public static void allBaskets (int count) {
+
+       Basket.allBasket = Basket.allBasket + count;
+    }
+
+    public static int getAllBasket(){
+
+        return allBasket;
     }
 
     public static void increaseCount(int count) {
@@ -53,6 +75,9 @@ public class Basket {
             return;
         }
 
+        allPrice(price);
+        allBaskets(count);
+
         items = items + "\n" + name + " - " +
             count + " шт. - " + price + " руб. " + " вес - " + count * weight;
         totalPrice = totalPrice + count * price;
@@ -66,6 +91,7 @@ public class Basket {
     }
 
     public static int getTotalPrice() {
+
         return totalPrice;
     }
 

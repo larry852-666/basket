@@ -1,15 +1,19 @@
 public class Main {
 
-
         public static void main(String[] args) {
         Basket basket = new Basket(1300);
         Basket pavelbasket = new Basket();
-        basket.add("Milk", 40, 2,0.5);
-        pavelbasket.add( "Щит", 15000, 12);
-        pavelbasket.print("Щит");
-        basket.print("Milk");
-        Arithmetic arithmetic = new Arithmetic(15500,15);
-        Arithmetic newarithmetic = new Arithmetic("Сумма",15,20);
+        Basket mybasket = new Basket ();
+        Basket mybasket2 = new Basket ();
+
+        basket.add("Milk", 1, 1,0.5);
+        pavelbasket.add( "Щит", 1, 12);
+        mybasket.add ("Thing one", 1, 0.5);
+        mybasket2.add ("Thing two", 1, 1.0);
+
+        System.out.println(Basket.getAllBasket());
+        System.out.println(Basket.getAllPrice());
+
        /* Printer printer = new Printer();
         Printer printer1 = new Printer();
         printer.append("New class two and i speak English", "i speak English",150);
